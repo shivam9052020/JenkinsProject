@@ -15,19 +15,19 @@
     <br/>
     <div>
         <label for="add">addition</label>
-        <input type="radio" name="add" value="add" id="add"/>
+        <input type="radio" name="op" value="add" id="add" checked="checked"/>
         <br/>
 
         <label for="sub">subtraction</label>
-        <input type="radio" name="sub" value="sub" id="sub"/>
+        <input type="radio" name="op" value="sub" id="sub"/>
         <br/>
 
         <label for="mul">multiplication</label>
-        <input type="radio" name="mul" value="mul" id="mul"/>
+        <input type="radio" name="op" value="mul" id="mul"/>
         <br/>
 
         <label for="div">division</label>
-        <input type="radio" name="div" value="div" id="div"/>
+        <input type="radio" name="op" value="div" id="div"/>
         <br/>
     </div>
     <input type="submit"/>
