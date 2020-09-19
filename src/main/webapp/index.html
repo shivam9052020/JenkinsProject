@@ -3,34 +3,23 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Calculator</title>
+    <script type="text/javascript" src="calc.js"></script>
 </head>
 <body>
 <h1 style="text-align: center">Calculator</h1>
-<form method="post" action="calc">
+<form method="post" action="calc" id="calc">
     <label for="first">First number</label>
     <input type="text" name="first" id="first"/>
     <br/>
     <label for="second">Second number</label>
     <input type="text" name="second" id="second"/>
     <br/>
-    <div>
-        <label for="add">addition</label>
-        <input type="radio" name="op" value="add" id="add" checked="checked"/>
-        <br/>
-
-        <label for="sub">subtraction</label>
-        <input type="radio" name="op" value="sub" id="sub"/>
-        <br/>
-
-        <label for="mul">multiplication</label>
-        <input type="radio" name="op" value="mul" id="mul"/>
-        <br/>
-
-        <label for="div">division</label>
-        <input type="radio" name="op" value="div" id="div"/>
-        <br/>
-    </div>
-    <input type="submit"/>
+    <label for="op">Operator</label>
+    <input type="text" name="op" id="op"/>
+    <br/>
+    <input type="submit" />
+    <br/>
+    <div id="result"></div>
 </form>
 </body>
 </html>
