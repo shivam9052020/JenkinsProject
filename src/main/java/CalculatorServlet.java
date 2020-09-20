@@ -7,7 +7,8 @@ import javax.servlet.http.*;
 
 @WebServlet(urlPatterns = "/calc")
 public class CalculatorServlet extends HttpServlet {
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
         PrintWriter out = response.getWriter();
         response.setContentType("application/json; charset=utf-8");
 

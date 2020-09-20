@@ -13,7 +13,8 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 
 @WebServlet(urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
         PrintWriter out = response.getWriter();
         response.setContentType("text/plain; charset=utf-8");
 

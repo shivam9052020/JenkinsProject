@@ -10,7 +10,8 @@ public class SecurityFilter implements Filter {
     public void init(FilterConfig filterConfig) {}
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain) throws IOException, ServletException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
         var req = (HttpServletRequest) request;
         var resp = (HttpServletResponse) response;
 
@@ -20,7 +21,7 @@ public class SecurityFilter implements Filter {
         if (session == null || token == null || !CsrfToken.matches(session.getId(), token))
             resp.sendError(401);
         else
-            filterChain.doFilter(request, response);
+            chain.doFilter(request, response);
     }
 
     @Override
