@@ -19,3 +19,7 @@ Accessing the app
 ===
 
 Open up <http://localhost:8080/mycalcwebapp/>
+
+Credits
+===
+All the security code (login, CSRF token, etc) is largely inspired or copy-pasted from https://github.com/NeilMadden/apisecurityinaction/tree/chapter04-end.
