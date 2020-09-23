@@ -14,7 +14,13 @@ function login(username, password) {
        if (res.ok) {
          res.json().then(json => {
             document.cookie = 'csrfToken=' + json.token + ';SameSite=strict';
-            window.location.replace('index.html');
+            let queryParams = Object.fromEntries( location.search
+                .replace(/(^\?)/, '')
+                .replace(/(\/$)/, '')
+                .split("&")
+                .map(function (n) { return n.split("="); }) );
+            let url = queryParams['backUrl'] || 'index.html';
+            window.location.replace(decodeURIComponent(url));
          });
        }
     })

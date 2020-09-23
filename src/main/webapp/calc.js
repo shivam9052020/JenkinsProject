@@ -17,7 +17,8 @@ function calc(first, second, op) {
         if (response.ok) {
             return response.json();
         } else if (response.status === 401) {
-            window.location.replace('login.html');
+            let original = encodeURIComponent(window.location.pathname + window.location.search);
+            window.location.replace('login.html?backUrl=' + original);
         } else {
             throw Error(response.statusText);
         }
